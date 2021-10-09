@@ -1,0 +1,17 @@
+<form action="/park/updatebookticket/{{ a.id }}/" method="POST">
+   {% csrf_token %} 
+
+  <div class="container">
+    <label for="adult"><b>Update No. of Adult</b></label>
+    <input type="text" placeholder="Number Of adult" name="adult" value = {{a.adult}} required>
+    <br>
+    <label for="minor"><b>Update No. of  Minor</b></label>
+    <input type="text" placeholder="Number of Minor" name="minor" value = {{a.minor}} required>
+    <br>
+    <label for="infant"><b>Update No. of Infant</b></label>
+    <input type="text" placeholder="Number of Infant" name="infant" value = {{a.infant}} required>
+    <br>
+    <button type="Update">Update</button>
+    
+  </div> 
+</form>

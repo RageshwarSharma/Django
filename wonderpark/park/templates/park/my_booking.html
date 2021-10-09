@@ -1,0 +1,38 @@
+<form action="/park/bookingsave/{{user_id}}/" method="post">
+  {% csrf_token %}
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2> Total Price</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>ADULT_NO</th>
+    <th>MINOR_NO</th>
+    <th>INFANT_NO</th>
+    <th>TOTAL PRICE</th>
+    <th>UPDATE</th>
+  </tr>
+  {% for i in a %}
+  <tr> 
+  <td> {{ i.id }}</td>
+  <td> {{ i.adult }}</td>
+  <td> {{ i.minor }}</td>
+  <td> {{ i.infant }}</td>
+  <td> {{ i.total_price}}</td>
+  <td> <a href="/park/updatebooking/{{i.id}}/">Update</a></td>
+  {% endfor %}
+  </tr>
+</table>
+
+
+</body>
+
+</html>

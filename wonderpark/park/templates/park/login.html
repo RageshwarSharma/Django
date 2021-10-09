@@ -1,0 +1,25 @@
+<form action="{% url 'park:login' %}" method="post">
+     {% csrf_token %}
+
+  <div class="container">
+    <label for="user_name"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="user_name" required>
+    
+    <br>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue"><a href="/park/terms/">Terms and conditions</a></a></p>
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+
+  </div>
+</form>
+<a href="/park/register/">Sign up</a>

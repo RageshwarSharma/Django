@@ -1,0 +1,38 @@
+<form action="{% url 'park:signup_save' %}" method="post">
+  {% csrf_token %}
+
+  <div class="container">
+    <label for="user_name"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="user_name" required>
+    <br>
+    <label for="first_name"><b>First Name</b></label>
+    <input type="text" placeholder="Enter FirstName" name="first_name" required>
+    <br>
+    <label for="last_name"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter LastName" name="last_name" required>
+    <br>
+    <label for="phone_number"><b>Phone Number</b></label>
+    <input type="text" placeholder="Enter PhoneNumber" name="phone_number" required>
+    <br>
+    <label for="gender"><b>Gender</b></label>
+    <input type="text" placeholder="Enter gender" name="gender" required>
+    <br>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter email" name="email" required>
+    <br>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter password" name="password" required>
+
+    <button type="submit">Signup</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue"><a href="/park/terms/">Terms and conditions</a></a></p>
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+
+  </div>
+</form>
+<a href="/park/">Login</a>

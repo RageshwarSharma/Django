@@ -1,0 +1,18 @@
+<form action="/park/bookingsave/{{ user_id }}/" method="post">
+  {% csrf_token %}
+
+  <div class="container">
+    <label for="adult"><b>No. of Adult</b></label>
+    <input type="text" placeholder="Number Of adult" name="adult" required>
+    <br>
+    <label for="minor"><b>No. of  Minor</b></label>
+    <input type="text" placeholder="Number of Minor" name="minor" required>
+    <br>
+    <label for="infant"><b>No. of Infant</b></label>
+    <input type="text" placeholder="Number of Infant" name="infant" required>
+    <br>
+
+    <button type="submit">Book</button>
+     
+  </div>
+</form>
